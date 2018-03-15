@@ -16,14 +16,14 @@ void setup() {
 }
 
 void loop() {
-  if((rawA==0)&&(rawB==0)){
+  if((rawA==0)&&(rawB==0)){ //no sensor crossed
     A = 0;
     B = 0;  
-  }else if((rawA==1)&&(rawB==0)){
+  }else if((rawA==1)&&(rawB==0)){//sensor A crossed not B
       count = count - ((1^A)&(0^B));
       A = rawA;
       B = rawB;
-  }else if((rawA==0)&&(rawB==1)){
+  }else if((rawA==0)&&(rawB==1)){// sensor B crossed not A
       count = count + ((0^A)&(1^B));
       A = rawA;
       B = rawB;
