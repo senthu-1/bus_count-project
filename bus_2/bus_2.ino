@@ -1,11 +1,11 @@
 int pinA = 5;//d1
 int pinB = 10;//sd3
 
-volatile int rawA = 0;
+volatile int rawA = 0;//raw value chaged by ISA
 volatile int rawB = 0;
 int A=0;
 int B=0;
-int count;
+int count; //count of the people
 
 void setup() {
   pinMode(pinA,INPUT);
@@ -33,7 +33,7 @@ void loop() {
 }
 
 
-
+//ISA
 void triggerA(){
   rawA = digitalRead(pinA);
 }
